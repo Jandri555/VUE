@@ -1,47 +1,36 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div id="app">
+    <!-- Aquí se carga el componente principal DE MOMENTO-->
+    <XestionPacientes />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script setup>
+import XestionPacientes from './components/XestionPacientes.vue'
+</script>
+
+<style>
+/* 👇 Estilos globales mínimos */
+:global(body) {
+  margin: 0;               /* quita el margen por defecto del body */
+  background: #f6f6f6;     /* color de fondo general */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+#app {
+  max-width: 80vw;
+  margin: 0 auto;          /* centra horizontalmente */
+  padding-top: 1rem;       /* 🔹 margen superior pequeño */
+  padding-bottom: 1rem;    /* 🔹 espacio para el futuro footer */
+  min-height: 100vh;       /* ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* el contenido empieza arriba */
+}
+/* Cuando la pantalla es menor a 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
