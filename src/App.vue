@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <!-- Aquí se carga el componente principal DE MOMENTO-->
-    <XestionPacientes />
+    <XestionUsuarios />
   </div>
 </template>
 
 <script setup>
-import XestionPacientes from './components/XestionPacientes.vue'
+import XestionUsuarios from './components/XestionUsuarios.vue'
 </script>
 
 <style>
