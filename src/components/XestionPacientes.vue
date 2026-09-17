@@ -220,7 +220,7 @@ form {
 }
 
 .btn-guardar {
-  background-color: #007bff;
+  background-color: #0be76e;
   color: white;
   border: none;
   padding: 0.4rem 1.5rem;
@@ -231,7 +231,7 @@ form {
 }
 
 .btn-guardar:hover {
-  background-color: #0056b3;
+  background-color: #00ff4c;
   border-radius: 0px;
 }
 
@@ -272,7 +272,7 @@ th {
 h4 {
   margin-bottom: 1rem;
   font-weight: 600;
-  background-color: #73aff0;
+  background-color: #14b805;
   color: white;
 }
 
